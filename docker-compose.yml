@@ -1,0 +1,35 @@
+version: '3.0'
+
+services:
+    nginx:
+        image: nginx
+        restart: always
+        environment:
+            - VIRTUAL_HOST=site.local
+        depends_on:
+            - php
+        volumes:
+            - ./docker/nginx/conf.d/default.nginx:/etc/nginx/conf.d/default.conf
+            - ./html/:/var/www/html/
+        ports:
+            - 80:80
+        networks:
+            - frontend
+            - backend
+
+    php:
+        build:
+            context: ./docker/php
+        restart: always
+        volumes:
+            - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+            - ./html/:/var/www/html/
+        networks:
+            - backend
+
+networks:
+    frontend:
+        #external:
+            #name: proxy_proxy
+    backend:
+    

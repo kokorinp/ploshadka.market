@@ -1,0 +1,23 @@
+{
+  "name": "ploshadka.market",
+  "version": "1.0.0",
+  "description": "ploshadka.market",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kokorinp/ploshadka.market.git"
+  },
+  "author": "TARAN",
+  "bugs": {
+    "url": "https://github.com/kokorinp/ploshadka.market.git/issues"
+  },
+  "homepage": "https://github.com/kokorinp/ploshadka.market.git#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.42.1"
+  }
+}
