@@ -119,8 +119,14 @@ p{
     display: block;
 }
 
-.logo__img{
+.logo{
     padding: 1.5rem;
+}
+
+
+.logo__img{
+    width: 100%;
+    height: 100%;
 }
 
 .logo_title{
